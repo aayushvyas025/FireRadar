@@ -2,7 +2,10 @@ import React from 'react'
 
 function Header() {
   return (
-    <div>Header</div>
+    <header className='header'>
+        <img src="./src/assets/logo.png" alt="app-logo" className='logo' />
+        <h1>FireRadar - Wildfire Tracking</h1>
+    </header>
   )
 }
 
