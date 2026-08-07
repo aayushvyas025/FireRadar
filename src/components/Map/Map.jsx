@@ -1,21 +1,22 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import envVariables from "../../constants/envVariables";
+import LocationMarker from "../LocationMarker/LocationMarker";
 
-function Map({ center, zoom, style }) {
+
+
+function Map({ center, zoom, style, position, maxBounds }) {
   const { mapUrl } = envVariables;
   return (
     <div className="map">
-      <MapContainer center={center} zoom={zoom} style={style}>
+      <MapContainer center={center} zoom={zoom} style={style} 
+       maxBounds={maxBounds}
+      >
         <TileLayer
           url={mapUrl}
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
-        <Marker position={center}>
-          <Popup>
-            Here Wild fire <br /> occurs
-          </Popup>
-        </Marker>
+        <LocationMarker position={center} />
       </MapContainer>
     </div>
   );

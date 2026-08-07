@@ -9,9 +9,13 @@ function App() {
     <div>
       <Header />
       <Map
-        center={[51.505, -0.09]}
+        center={[28.6139, 77.2090]}
         zoom={13}
-        style={{ height: "800px", width: "inherit" }}
+        style={{ height: "100vh", width: "100%" }}
+        maxBounds={[
+          [-90, -180],
+          [90, 180],
+        ]}
       />
       <Footer />
     </div>
