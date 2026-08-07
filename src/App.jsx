@@ -6,10 +6,10 @@ import Map from "./components/Map/Map";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Map
-        center={[28.6139, 77.2090]}
+        center={[28.6139, 77.209]}
         zoom={13}
         style={{ height: "100vh", width: "100%" }}
         maxBounds={[
@@ -18,7 +18,8 @@ function App() {
         ]}
       />
       <Footer />
-    </div>
+      <Toaster position="top-center" reverseOrder={false} />
+    </>
   );
 }
 
