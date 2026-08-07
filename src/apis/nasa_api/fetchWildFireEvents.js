@@ -8,7 +8,7 @@ async function fetchWildFireEvents() {
     return {
       success: true,
       message:"Wildfire events fetched successfully",
-      wildFireEvent: data.events.filter((event) =>
+      data: data.events.filter((event) =>
         event?.title.toLowerCase().includes("wildfire"),
       ),
     };
@@ -17,6 +17,7 @@ async function fetchWildFireEvents() {
     return {
       success: false,
       message: error.message || "Error, while fetching wildfire events",
+      data:null
     };
   }
 }

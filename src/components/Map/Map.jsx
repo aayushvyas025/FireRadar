@@ -5,6 +5,7 @@ import LocationMarker from "../LocationMarker/LocationMarker";
 
 
 
+
 function Map({ center, zoom, style, position, maxBounds }) {
   const { mapUrl } = envVariables;
   return (
