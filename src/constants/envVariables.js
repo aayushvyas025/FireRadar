@@ -1,5 +1,5 @@
 const envVariables = Object.freeze({
-  mapUrl: import.meta.env.VITE_MAP_URL,
+  apiKey: import.meta.env.VITE_API_KEY,
 });
 
 export default envVariables;
