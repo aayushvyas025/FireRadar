@@ -29,11 +29,4 @@ function Map({
   );
 }
 
-Map.defaultProps = {
-  center: {
-    lat: 42.365,
-    lng: -122.8765,
-  },
-  zoom: 6,
-};
 export default Map;
