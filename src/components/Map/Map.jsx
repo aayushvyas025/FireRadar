@@ -11,20 +11,17 @@ function Map({
     lng: -122.8765,
   },
   zoom = 6,
+  wildfireEvents
 }) {
-  const { fetchingWildFireEvents, events, apiResponse } = useFetchFireEvents();
-  console.log(center, zoom);
-  useEffect(() => {
-    fetchingWildFireEvents();
-  }, []);
-
   return (
     <div className="map">
       <GoogleMapReact
         bootstrapURLKeys={{ key: apiKey }}
         defaultCenter={center}
         defaultZoom={zoom}
-      ></GoogleMapReact>
+      >
+        <LocationMarker lat={center.lat} lng={center.lng} />
+      </GoogleMapReact>
     </div>
   );
 }
