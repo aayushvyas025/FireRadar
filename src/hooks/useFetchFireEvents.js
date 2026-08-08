@@ -47,4 +47,4 @@ function useFetchFireEvents() {
   return { apiResponse, events, fetchingWildFireEvents };
 }
 
-export default useFetchFireEvents; 
+export default useFetchFireEvents;
