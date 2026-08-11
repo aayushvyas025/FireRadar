@@ -79,3 +79,23 @@ body {
   color: #4b5563;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
+
+.location-marker {
+  position: relative;
+  cursor: pointer;
+}
+
+.location-info {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  padding: 8px;
+  background: white;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.location-marker:hover .location-info {
+  display: inline-block;
+}

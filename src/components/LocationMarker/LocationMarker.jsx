@@ -1,12 +1,11 @@
-import React from "react";
-import { FlameKindling } from "lucide-react";
+import { FlameIcon } from "lucide-react";
 
-function LocationMarker({ lat, lng, onClickHandler }) {
+function LocationMarker({ lat, lng }) {
   return (
-    <div  onClick={onClickHandler}>
-       <FlameKindling size={20} color="#E63946" />
+    <div>
+       <FlameIcon size={20} color="#E63946" />
     </div>
   );
 }
 
-export default LocationMarker;
+export default LocationMarker 
