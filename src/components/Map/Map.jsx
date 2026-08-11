@@ -36,10 +36,8 @@ function Map({
         defaultZoom={zoom}
       >
         {markers.map(([longitude, latitude], index) => (
-          <LocationMarker key={index} lat={latitude} lng={longitude}>
-            {eventInfo.map((title, index) => (
-              <LocationInfo key={index} title={title} />
-            ))}
+          <LocationMarker key={index} lat={latitude} lng={longitude}>            
+              <LocationInfo title={eventInfo[title].title} />
           </LocationMarker>
         ))}
       </GoogleMapReact>
