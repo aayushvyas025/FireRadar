@@ -13,8 +13,18 @@ function Map({
   },
   zoom = 6,
   wildfireEvents,
-  loading
+  loading,
 }) {
+  const geoLocations = wildfireEvents
+    .slice(0, 100)
+    .map((wildfire) => wildfire.geometries);
+  const markers = geoLocations.map(
+    (geoCoordinates) => geoCoordinates[0].coordinates,
+  ); 
+
+  console.log(geoLocations); 
+  console.log(markers); 
+
   return (
     <div className="map">
       {loading && <MapSkeleton />}
@@ -22,8 +32,10 @@ function Map({
         bootstrapURLKeys={{ key: apiKey }}
         defaultCenter={center}
         defaultZoom={zoom}
-        >
-        <LocationMarker lat={center.lat} lng={center.lng} />
+      >
+        {markers.map(([longitude, latitude], index) => (
+          <LocationMarker key={index} lat={latitude} lng={longitude} />
+        ))}
       </GoogleMapReact>
     </div>
   );
