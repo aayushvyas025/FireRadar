@@ -1,5 +1,3 @@
-import React from 'react'
-
 function MapSkeleton() {
   return (
     <div className="map-skeleton">

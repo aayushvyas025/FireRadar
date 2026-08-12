@@ -1,8 +1,6 @@
 import GoogleMapReact from "google-map-react";
 import envVariables from "../../constants/envVariables";
 import LocationMarker from "../LocationMarker/LocationMarker";
-import useFetchFireEvents from "../../hooks/useFetchFireEvents";
-import { useEffect, useState } from "react";
 import MapSkeleton from "../Skeleton/MapSkeleton";
 import LocationInfo from "../LocationInfo/LocationInfo";
 

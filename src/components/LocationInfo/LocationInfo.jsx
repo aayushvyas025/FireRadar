@@ -1,5 +1,3 @@
-import React from 'react'
-
 function LocationInfo({title}) {
   console.log(title)
   return (
