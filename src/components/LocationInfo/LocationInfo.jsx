@@ -1,8 +1,9 @@
 import React from 'react'
 
-function LocationInfo({info}) {
+function LocationInfo({title}) {
+  console.log(title)
   return (
-    <div className='location-info'>LocationInfo</div>
+    <div className='location-info'>{title}</div>
   )
 }
 

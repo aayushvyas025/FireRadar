@@ -87,6 +87,7 @@ body {
 
 .location-info {
   display: none;
+  width: 200px;
   position: absolute;
   top: 40px;
   left: 0;

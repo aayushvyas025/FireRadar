@@ -25,7 +25,9 @@ function Map({
 
   const eventInfo = wildfireEvents
     .slice(0, 100)
-    .map((wildfire) => wildfire.title);
+    .map((wildfire) => wildfire.title); 
+
+    console.log(eventInfo)
 
   return (
     <div className="map">
@@ -37,7 +39,7 @@ function Map({
       >
         {markers.map(([longitude, latitude], index) => (
           <LocationMarker key={index} lat={latitude} lng={longitude}>            
-              <LocationInfo title={eventInfo[title].title} />
+              <LocationInfo title={eventInfo[index]} />
           </LocationMarker>
         ))}
       </GoogleMapReact>

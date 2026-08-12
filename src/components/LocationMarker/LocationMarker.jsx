@@ -1,9 +1,10 @@
 import { FlameIcon } from "lucide-react";
 
-function LocationMarker({ lat, lng }) {
+function LocationMarker({ lat, lng, children }) {
   return (
-    <div>
-       <FlameIcon size={20} color="#E63946" />
+    <div className="location-marker">
+       <FlameIcon size={20} color="#E63946" /> 
+       {children}
     </div>
   );
 }
