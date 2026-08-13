@@ -15,7 +15,6 @@ function Map({
   loading,
 }) {
   const geoLocations = wildfireEvents
-    .slice(0, 100)
     .map((wildfire) => wildfire.geometries);
   const markers = geoLocations.map(
     (geoCoordinates) => geoCoordinates[0].coordinates,
@@ -24,8 +23,6 @@ function Map({
   const eventInfo = wildfireEvents
     .slice(0, 100)
     .map((wildfire) => wildfire.title); 
-
-    console.log(eventInfo)
 
   return (
     <div className="map">

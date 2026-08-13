@@ -11,8 +11,6 @@ async function fetchWildFireEvents() {
     const isCacheValid = Date.now() - cache.timestamp < CACHE_TTL;
 
     if (isCacheValid) {
-      console.log("Using cached wildfire data");
-
       return {
         success: true,
         message: "Wildfire events loaded from cache",
@@ -21,9 +19,6 @@ async function fetchWildFireEvents() {
     }
   }
 
-  console.log("Cache expired");
-
-  console.log("Fetching wildfire events from API");
   try {
     const response = await fetch(
       `https://eonet.gsfc.nasa.gov/api/v2.1/events`,
@@ -36,7 +31,7 @@ async function fetchWildFireEvents() {
 
     const wildfireEvents = data?.events.filter((event) =>
       event?.title.toLowerCase().includes("wildfire"),
-    );
+    ).slice(0, 100); 
 
     // set the items in filtered data + timestamp
     localStorage.setItem(
